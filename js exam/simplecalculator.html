@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    
+    <!-- <script>
+
+        let f=parseInt(prompt(" Enter Your First Value : "));
+        let s=parseInt(prompt(" Enter Your Secound Value : "));
+
+        if(addition){
+                console.log("Addition is :",f+s);
+        }
+        else if(decriment){
+            console.log("decriment is :",f-s);
+        }
+        else if(multiply){
+            console.log("multiply is :",f*s);
+        }
+        else if(divison){
+            console.log("divison is :",f/s);
+        }
+        
+        
+        
+    </script> -->
+
+    <script>
+        
+        let f = parseInt(prompt("Enter Your First Value: "));
+        let s = parseInt(prompt("Enter Your Second Value: "));
+        let operation = prompt("Enter operation (add, sub, mul, div):");
+    
+        if (operation === "add") {
+            console.log("Addition is:", f + s);
+        } else if (operation === "sub") {
+            console.log("Subtraction is:", f - s);
+        } else if (operation === "mul") {
+            console.log("Multiplication is:", f * s);
+        } else if (operation === "div") {
+            if (s !== 0) {
+                console.log("Division is:", f / s);
+            } else {
+                console.log("Cannot divide by zero.");
+            }
+        } else {
+            console.log("Invalid operation.");
+        }
+
+    </script>
+    
+</body>
+</html>
