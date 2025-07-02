@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch</title>
+
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            background-color: rgba(255, 206, 122, 0.266);
+        }
+
+        .h1 {
+            font-size: 36px;
+            color: #8b1499d2;
+            margin-bottom: 20px;
+            font-family: cursive;
+        }
+
+        #timer {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        a {
+            text-decoration: none;
+            border: 1.50px solid black;
+            border-radius: 9px;
+            padding: 8px;
+            font-size: 15px;
+            font-family: cursive;
+            color: #8b1499d2;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 class="h1"> Countdown Timer</h1>
+    <div id="timer"></div>
+</body>
+
+<script>
+
+    let endDate = "Fri Jun 28 2025 14:56:43 GMT+0530";
+
+    function watch() {
+        let end = new Date(endDate);
+        let now = new Date();
+
+        let diff = end - now;
+
+        let days = Math.floor(diff / 1000 / 60 / 60 / 24);
+        let hours = Math.floor(diff / 1000 / 60 / 60 % 24);
+        let min = Math.floor(diff / 1000 / 60 % 60);
+        let sec = Math.floor(diff / 1000 % 60);
+
+        document.getElementById("timer").innerHTML = `
+             <a href="javascript:void(0)">${days}</a>
+             <a href="javascript:void(0)">${hours}</a>
+             <a href="javascript:void(0)">${min}</a>
+             <a href="javascript:void(0)">${sec}</a>
+             `
+    }
+
+    setInterval(() => {
+        watch();
+    }, 1000);
+
+</script>
+
+</html>
